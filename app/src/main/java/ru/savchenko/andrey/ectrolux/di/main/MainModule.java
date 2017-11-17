@@ -19,22 +19,7 @@ import static ru.savchenko.andrey.ectrolux.storage.Const.MAIN;
 public class MainModule {
     @MainScope
     @Provides
-    MainInterActor interActor(RetrofitService retrofitService){
+    MainInterActor interActor(RetrofitService retrofitService) {
         return new MainInterActor(retrofitService);
     }
-
-    @MainScope
-    @Provides
-    @Named(MAIN)
-    Scheduler mainThread(){
-        return AndroidSchedulers.mainThread();
-    }
-
-    @MainScope
-    @Provides
-    @Named(IO)
-    Scheduler ioThread(){
-        return AndroidSchedulers.mainThread();
-    }
-
 }

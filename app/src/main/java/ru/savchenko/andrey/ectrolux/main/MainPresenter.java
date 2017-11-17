@@ -23,12 +23,6 @@ import static ru.savchenko.andrey.ectrolux.storage.Const.MAIN;
 public class MainPresenter extends MvpPresenter<MainView> {
     private static final String TAG = "MainPresenter";
     @Inject
-    @Named(IO)
-    Scheduler ioThread;
-    @Inject
-    @Named(MAIN)
-    Scheduler mainThread;
-    @Inject
     MainInterActor interActor;
 
     MainPresenter() {
